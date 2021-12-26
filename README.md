@@ -7,3 +7,9 @@ Inspired by an internet picture. :)
 <p align="center">
   <img src="./assets/origin.png">
 </p>
+
+## TODO
+
+- [ ] complete 2022 statutory holidays
+- [ ] docs: cron
+- [ ] docs: guide

@@ -4,15 +4,23 @@
   "description": "Generate a picture with the number of sharing.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "node",
+    "js",
     "canvas",
     "cron"
   ],
   "author": "Singlebyte <jazereg@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "dotenv": "^10.0.0",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1"
+  },
   "engines": {
     "node": ">=14.0.0"
   }
