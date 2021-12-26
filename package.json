@@ -1,0 +1,19 @@
+{
+  "name": "move-your-ass-or-die-faster",
+  "version": "1.0.0",
+  "description": "Generate a picture with the number of sharing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "canvas",
+    "cron"
+  ],
+  "author": "Singlebyte <jazereg@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
