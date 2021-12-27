@@ -10,6 +10,5 @@ Inspired by an internet picture. :)
 
 ## TODO
 
-- [ ] complete 2022 statutory holidays
 - [ ] docs: cron
 - [ ] docs: guide
