@@ -6,7 +6,7 @@ const { createCanvas, loadImage } = require('canvas');
 /**
  * @param {number} num
  */
-exports.drawPic = async function drawPic(num) {
+async function drawPic(num) {
   return loadImage('assets/origin.png').then((image) => {
     const canvas = createCanvas(684, 670);
     const ctx = canvas.getContext('2d');
@@ -37,4 +37,6 @@ exports.drawPic = async function drawPic(num) {
       out.on('finish', () => resolve(targetPath));
     });
   });
-};
+}
+
+module.exports = { drawPic };

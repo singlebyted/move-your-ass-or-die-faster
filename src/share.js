@@ -7,7 +7,7 @@ const md5 = require('md5');
  * @param {string} imgPath
  * @param {string} robotKey
  */
-exports.shareToWecom = function shareToWecom(imgPath, robotKey) {
+function shareToWecom(imgPath, robotKey) {
   const buffer = fs.readFileSync(imgPath);
   const hash = md5(buffer);
 
@@ -29,4 +29,6 @@ exports.shareToWecom = function shareToWecom(imgPath, robotKey) {
   } catch {
     return false;
   }
-};
+}
+
+module.exports = { shareToWecom };

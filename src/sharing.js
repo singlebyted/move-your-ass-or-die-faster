@@ -11,7 +11,7 @@ const sharingNumberFilePath = path.resolve('.number-of-sharing');
  * @param {{ number?: { number?: number[] } }} holidays holidays data
  * @param {moment.Moment} today moment object
  */
-exports.isTodayAWorkingDay = function isTodayAWorkingDay(holidays, today) {
+function isTodayAWorkingDay(holidays, today) {
   const [year, month, date] = today.toArray();
   if (!holidays[year] || !holidays[year][month + 1]) {
     return true;
@@ -23,12 +23,12 @@ exports.isTodayAWorkingDay = function isTodayAWorkingDay(holidays, today) {
   }
 
   return !holidaysInMonth.includes(date);
-};
+}
 
 /**
  * read number of shared from a specified file
  */
-exports.readSharedNumber = function readSharedNumber() {
+function readSharedNumber() {
   if (!fs.statSync(sharingNumberFilePath, { throwIfNoEntry: false })?.isFile()) {
     writeSharingNumber(INITIAL_NUMBER_OF_SHARING);
   }
@@ -40,13 +40,15 @@ exports.readSharedNumber = function readSharedNumber() {
   }
 
   return +num;
-};
+}
 
 /**
  * write number of sharing into a specified file
  *
  * @param {number} num
  */
-exports.writeSharingNumber = function writeSharingNumber(num) {
+function writeSharingNumber(num) {
   fs.writeFileSync(sharingNumberFilePath, `${num}`);
-};
+}
+
+module.exports = { isTodayAWorkingDay, writeSharingNumber, readSharedNumber };
