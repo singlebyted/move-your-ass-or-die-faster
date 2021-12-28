@@ -16,7 +16,7 @@ async function main() {
   const imgPath = await drawPic(sharingNumber);
 
   // TODO: make this configurable
-  const success = shareToWecom(imgPath, process.env.WECOM_BOT_KEY);
+  const success = await shareToWecom(imgPath, process.env.WECOM_BOT_KEY);
   if (success) {
     writeSharingNumber(sharingNumber);
   }
