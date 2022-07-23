@@ -2,7 +2,7 @@
 
 [简体中文](./README.md) | English
 
-In order to remind you not to sit for a long time, this program generates a warning picture with the number of sharing in the afternoon of each working day.
+In order to remind you not to sit for a long time, this program generates a warning picture with the number of sharing and send it to chat in the afternoon of each working day, the number will be increased by one for each generated.
 
 Inspired by an internet picture. :)
 
@@ -12,7 +12,18 @@ Inspired by an internet picture. :)
 
 ## Usage
 
-1. create a script
+1. create the initial number of sharing and env files
+
+```sh
+cd <project>
+touch .number-of-sharing .env
+# 967 is the initial sharing number on original picture
+echo 967 > .number-of-sharing
+# only support wechat bot now
+echo WECOM_BOT_KEY=XXX > .env
+```
+
+2. create a script
 
 ```sh
 cd <home_dir>
@@ -20,14 +31,14 @@ touch ass-reminder.sh
 chmod +x ass-reminder.sh
 ```
 
-2. edit the script
+3. edit the script
 
 ```sh
 cd <project_dir>
 npm run start
 ```
 
-3. add a crontab job
+4. add a crontab job
 
 ```sh
 # crontab -e
