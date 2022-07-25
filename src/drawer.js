@@ -21,7 +21,7 @@ async function drawPic(num) {
     }
 
     // draw a new number
-    ctx.font = '30px Impact';
+    ctx.font = '30px Arial';
     ctx.fillText(num, 66, 602);
 
     const targetPath = path.resolve('temp/target.png');
